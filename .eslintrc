@@ -1,0 +1,51 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".ts", ".js", ".jsx", ".json"]
+      }
+    ],
+    "react/state-in-constructor": "off",
+    "react/prop-types": "off",
+    "no-underscore-dangle": "off",
+    "import/imports-first": ["error", "absolute-first"],
+    "import/newline-after-import": "error"
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true
+  },
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@store", "./src/store"],
+          ["@components", "./src/components"],
+          ["@routes", "./src/routes"],
+          ["@styles", "./src/styles"]
+        ]
+      }
+    }
+  }
+}

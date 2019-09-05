@@ -1,0 +1,25 @@
+@import 'variables';
+
+html, body, :global(#app) {
+  height: 100%;
+}
+
+body {
+  margin:0;
+  background-color: $body;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  padding: 1px;
+  background-color: map-get($scrollbar, background);
+}
+
+::-webkit-scrollbar-track {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: map-get($scrollbar, thumb);
+}
